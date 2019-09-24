@@ -19,15 +19,13 @@ double calculate_time(){
     gettimeofday(&t,0);
     return t.tv_sec + 1E-6 * t.tv_usec;
 }
-int sum(int* i,int j){
-	int sum1=0;
-	int k;
-	for(k=0;k<j;k++){
-		sum1=sum1+i[k];	
-	}
-	return sum1;
-}
-double ave(int i,int j){
-	double a1=(double)i/(double)j;
-	return a1;
+struct arg operater(int* i,int j){
+	struct arg k;
+	int s;
+	k.sum=0;
+	k.ave=0.0;
+	for(s=0;s<j;s++)
+		k.sum=k.sum+i[s];
+	k.ave=((float)k.sum)/j;
+	return k;
 }
