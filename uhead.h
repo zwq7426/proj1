@@ -2,15 +2,10 @@
 #include<stdlib.h>
 #include<time.h>
 
-/*struct arg{
+struct arg{
 	int sum;
 	float ave;
-};*/
-
+};
+struct arg operater(int*,int);
 void show(int*,int);
 void urand(int*,int);
-int sum(int*,int);
-double ave(int,int);
-void uwrite(const char *,int *,int);
-void uread(const char *,int *,int);
-/*struct arg uoperate(int*,int)*/
